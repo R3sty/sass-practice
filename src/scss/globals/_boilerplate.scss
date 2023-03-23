@@ -1,3 +1,4 @@
+@use '../util/' as util;
 //RESETS
 
 //sets the default box-sizing property for the entire HTML document to "border-box". This means that the width and height of an element will include any padding and borders that are applied to it.
@@ -5,6 +6,8 @@ html {
     box-sizing: border-box;
     font-size: 100%;
 }
+
+
 
 //ensures that all elements on the page have the same box-sizing property as the HTML element, which is set to "border-box".
 *,
@@ -16,7 +19,9 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: util.$font;
     background-color: var(--bg-color);
     color: var(--text-color);
+    display: grid;
+    justify-content: center;
 }

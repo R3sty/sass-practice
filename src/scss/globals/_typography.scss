@@ -1,3 +1,5 @@
+@use '../util/' as util;
+
 h1,
 h2,
 h3 {
@@ -6,8 +8,22 @@ h3 {
     margin-top: 0;
 }
 
+h1 {
+    //font-size: clamp(1.75rem, 1rem + 2vw, 2.5rem) 
+    font-size: clamp(util.rem(28), util.rem(16) + 2vw, util.rem(40)) //7.5vw //28px;
+
+        // @include util.breakpoint(medium) {
+        //     font-size: 36px;
+        // }
+
+        // @include util.breakpoint(large) {
+        //     font-size: 42px;
+        // }
+}
+
 p {
     margin-top: 0;
+    font-size: (util.rem(16))
 }
 
 a,

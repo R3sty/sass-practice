@@ -1,3 +1,5 @@
+@use '../util/' as util;
+
 .grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -12,7 +14,7 @@
     padding-left: 20px;
     padding-right: 20px;
 
-    @media (min-width: 900px) {
+    @include util.breakpoint(large) {
         grid-template-columns: 2fr 1fr;
         grid-template-rows: auto;
     }
@@ -24,10 +26,28 @@
 
     &__main {
         background-color: hsl(240, 98%, 35%);
+
+        @include util.breakpoint(medium) {
+            text-align: center;
+            background-color: hsl(120, 93%, 23%);
+        }
+
+        @include util.breakpoint(large) {
+            background-color: rgb(255, 213, 5);
+        }
+
     }
 
     &__sidebar {
         background-color: hsl(300, 100%, 21%);
+
+        @include util.breakpoint-down(medium) {
+            text-align: center;
+        }
+
+        @include util.breakpoint-down(small) {
+            text-align: right;
+        }
     }
 
 }

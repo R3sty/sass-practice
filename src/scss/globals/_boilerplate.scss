@@ -4,10 +4,8 @@
 //sets the default box-sizing property for the entire HTML document to "border-box". This means that the width and height of an element will include any padding and borders that are applied to it.
 html {
     box-sizing: border-box;
-    font-size: 100%;
+    font-size: 100% //62.5%;
 }
-
-
 
 //ensures that all elements on the page have the same box-sizing property as the HTML element, which is set to "border-box".
 *,
